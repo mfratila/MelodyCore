@@ -127,9 +127,8 @@ header.scrolled{ background:var(--paper); box-shadow:0 2px 14px rgba(45,8,3,.08)
 
 /* ---------- locatie ---------- */
 .locatie{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
-.map-card{ background:var(--maroon); border-radius:22px; aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
-.map-card .icon{ width:46px; height:46px; }
-.map-card svg path, .map-card svg circle{ stroke:var(--paper); }
+.map-card{ background:var(--maroon); border-radius:22px; aspect-ratio:4/3; position:relative; overflow:hidden; }
+.map-card iframe{ width:100%; height:100%; border:0; display:block; }
 .addr{ font-size:15px; line-height:1.8; margin:18px 0 8px; }
 .addr strong{ display:block; font-family:var(--font-display); font-size:22px; font-weight:900; margin-bottom:6px; }
 .hint{ font-size:14px; color:var(--maroon-deep); opacity:.75; }
