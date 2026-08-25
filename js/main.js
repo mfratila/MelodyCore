@@ -7,7 +7,33 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.18 });
 
-document.querySelectorAll('.reveal, .reveal-group, .staff-divider').forEach(el => io.observe(el));
+document.querySelectorAll('.reveal, .reveal-group').forEach(el => io.observe(el));
+
+const staffDivider = document.querySelector('.staff-divider');
+const staffPath = staffDivider?.querySelector('.staff-path');
+let staffLength = 1400;
+
+if (staffDivider && staffPath) {
+  staffLength = staffPath.getTotalLength();
+  staffPath.style.strokeDasharray = staffLength;
+
+  function updateStaffProgress() {
+    staffFrame = undefined;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const dividerTop = staffDivider.getBoundingClientRect().top;
+    const progress = Math.min(1, Math.max(0, (window.innerHeight - dividerTop) / (window.innerHeight * 0.65)));
+    staffPath.style.strokeDashoffset = staffLength * (1 - progress);
+  }
+
+  function requestStaffProgress() {
+    updateStaffProgress();
+    requestAnimationFrame(updateStaffProgress);
+  }
+
+  window.addEventListener('scroll', requestStaffProgress, {passive:true});
+  window.addEventListener('resize', requestStaffProgress);
+  updateStaffProgress();
+}
 
 const ctaHero = document.getElementById('ctaHero');
 if (ctaHero) {
