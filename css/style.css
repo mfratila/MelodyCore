@@ -90,6 +90,10 @@ header.scrolled{ background:var(--paper); box-shadow:0 2px 14px rgba(45,8,3,.08)
 .despre-tape{ position:absolute; top:18px; left:50%; transform:translateX(-50%) rotate(-3deg); width:90px; height:26px; background:var(--paper); opacity:.8; }
 .despre p{ font-size:16px; line-height:1.85; margin-bottom:18px; max-width:520px; }
 .despre .script{ font-size:24px; color:var(--orange-deep); }
+.badge-row{ display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 26px; }
+.badge{ background:var(--cream); color:var(--maroon-deep); font-size:13px; font-weight:700; padding:8px 16px; border-radius:999px; }
+.btn-outline{ border:1.5px solid var(--maroon); color:var(--maroon); padding:12px 24px; border-radius:999px; background:transparent; transition:background .25s ease, color .25s ease; }
+.btn-outline:hover{ background:var(--maroon); color:var(--paper); }
 
 /* ---------- cursuri ---------- */
 .cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
@@ -143,6 +147,21 @@ header.scrolled{ background:var(--paper); box-shadow:0 2px 14px rgba(45,8,3,.08)
 .contact-row a{ display:flex; align-items:center; gap:8px; }
 .contact-row .icon{ width:20px; height:20px; }
 
+/* ---------- despre-maria page ---------- */
+.about-hero-section{ padding-top:170px; }
+.about-hero{ display:grid; grid-template-columns:.8fr 1.2fr; gap:56px; align-items:center; }
+.about-hero h1{ font-size:44px; margin:8px 0 4px; }
+.about-subtitle{ font-family:var(--font-body); font-weight:700; color:var(--orange-deep); font-size:15px; margin-bottom:18px; }
+.credential-list{ display:flex; flex-direction:column; gap:20px; max-width:640px; }
+.credential-item{ display:flex; align-items:flex-start; gap:16px; }
+.credential-icon{ width:44px; height:44px; border-radius:50%; background:var(--orange); flex:0 0 auto; display:flex; align-items:center; justify-content:center; font-size:19px; }
+.credential-item p{ font-size:15px; line-height:1.7; padding-top:8px; }
+.philosophy p{ font-size:16px; line-height:1.85; margin-bottom:18px; max-width:640px; }
+.philosophy .script{ font-size:26px; color:var(--orange-deep); max-width:640px; }
+.photo-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.photo-placeholder{ aspect-ratio:4/5; border-radius:20px; background:var(--peach); display:flex; align-items:center; justify-content:center; }
+.photo-placeholder span{ font-family:var(--font-display); font-size:13px; color:var(--maroon-deep); opacity:.55; text-align:center; padding:0 14px; }
+
 /* ---------- footer ---------- */
 footer{ background:var(--maroon); color:var(--paper); padding:50px 0 26px; }
 footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
@@ -150,11 +169,13 @@ footer .wrap{ display:flex; justify-content:space-between; align-items:center; f
 .foot-bottom{ text-align:center; font-size:12.5px; opacity:.55; margin-top:34px; }
 
 @media (max-width:860px){
-  .hero .wrap, .despre, .locatie{ grid-template-columns:1fr; }
+  .hero .wrap, .despre, .locatie, .about-hero{ grid-template-columns:1fr; }
   .cards, .features{ grid-template-columns:1fr 1fr; }
   .hero-logo h1{ font-size:42px; }
+  .photo-grid{ grid-template-columns:1fr 1fr; }
 }
 @media (max-width:560px){
   .cards, .features{ grid-template-columns:1fr; }
   .ribbon-big{ font-size:24px; padding:18px 30px; }
+  .photo-grid{ grid-template-columns:1fr; }
 }

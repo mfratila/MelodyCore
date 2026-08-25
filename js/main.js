@@ -9,12 +9,16 @@ const io = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal, .reveal-group, .staff-divider').forEach(el => io.observe(el));
 
-document.getElementById('ctaHero').addEventListener('click', () => {
-  document.getElementById('cta').scrollIntoView({behavior:'smooth'});
-});
+const ctaHero = document.getElementById('ctaHero');
+if (ctaHero) {
+  ctaHero.addEventListener('click', () => {
+    document.getElementById('cta').scrollIntoView({behavior:'smooth'});
+  });
+}
 
 (function(){
   const track = document.getElementById('carouselTrack');
+  if (!track) return;
   const dots = document.querySelectorAll('#carouselDots .dot');
   const slideCount = track.children.length;
   let index = 0;
