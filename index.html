@@ -152,54 +152,60 @@
   </div>
 </section>
 
-<section class="section testimonials-section reveal" id="testimoniale">
+<section class="section testimonials-section testimonials-scroll-section reveal" id="testimoniale">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Din sala de studiu</p>
       <h2>Povești care se aud</h2>
       <p class="testimonial-intro">Primele acorduri se transformă, pas cu pas, în curaj și încredere.</p>
     </div>
-    <div class="carousel">
-      <button class="carousel-btn" id="prevBtn" aria-label="Testimonialul anterior">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18 L9 12 L15 6"/></svg>
-      </button>
-      <div class="carousel-viewport">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p class="testimonial-quote">Fiica mea a prins curaj pe scenă abia după câteva luni de lecții. Mulțumim, Maria!</p>
+  </div>
+
+  <div class="testimonials-viewport" aria-label="Testimoniale elevi">
+    <div class="carousel-track" id="carouselTrack">
+      <article class="testimonial-slide">
+        <div class="testimonial-card testimonial-card--with-photo">
+          <div class="testimonial-photo-wrap">
+            <img src="assets/images/testimonials/testimonial_eva.jpeg" alt="Eva, fostă elevă de canto și pian" />
+          </div>
+          <div class="testimonial-content">
+            <p class="testimonial-quote">Experiența mea la orele de canto și pian a fost una foarte frumoasă. Mi-a plăcut foarte mult faptul că orele au fost mereu interactive și adaptate nivelului și nevoilor mele. Am simțit că am evoluat atât din punct de vedere tehnic, cât și în ceea ce privește încrederea în mine și plăcerea de a cânta.</p>
+            <p class="testimonial-quote">Mi-a plăcut în mod deosebit răbdarea, implicarea și atmosfera creată la fiecare oră. Colaborarea cu Maria a fost mereu plăcută și m-am simțit încurajată să încerc lucruri noi și să îmi depășesc limitele.</p>
+            <p class="testimonial-quote">Cu siguranță recomand cu drag orele de canto și pian oricui își dorește să învețe, să evolueze și, mai ales, să se bucure de muzică. 🤍</p>
+            <div class="testimonial-meta">
               <div class="testimonial-avatar">E</div>
-              <p class="testimonial-name">Elena</p>
-              <p class="testimonial-role">părinte, elevă de pian</p>
-            </div>
-          </div>
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p class="testimonial-quote">Am învățat mai multă teorie muzicală în trei luni decât în doi ani de școală.</p>
-              <div class="testimonial-avatar">A</div>
-              <p class="testimonial-name">Andrei</p>
-              <p class="testimonial-role">elev adult, pian</p>
-            </div>
-          </div>
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p class="testimonial-quote">Atmosfera e super-prietenoasă, iar Maria știe exact cum să te motiveze.</p>
-              <div class="testimonial-avatar">I</div>
-              <p class="testimonial-name">Ioana</p>
-              <p class="testimonial-role">elevă, canto</p>
+              <div>
+                <p class="testimonial-name">Eva</p>
+                <p class="testimonial-role">fostă elevă · canto și pian</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <button class="carousel-btn" id="nextBtn" aria-label="Testimonialul următor">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 L15 12 L9 18"/></svg>
-      </button>
+      </article>
+
+      <article class="testimonial-slide">
+        <div class="testimonial-card testimonial-card--with-photo">
+          <div class="testimonial-photo-wrap">
+            <img src="assets/images/testimonials/testimonial_alex.jpeg" alt="Alex Craciun, fost elev de teorie muzicală" />
+          </div>
+          <div class="testimonial-content">
+            <p class="testimonial-quote">Maria este o profesoară foarte implicată, pozitivă și mereu dornică să împărtășească tot ceea ce știe. Orele de teorie cu ea m-au ajutat foarte mult să mă dezvolt și să înțeleg muzica mult mai bine. Reușește să explice lucrurile clar și să facă teoria muzicală mult mai interesantă și ușor de înțeles. Se vede că predă cu multă pasiune și că își dorește cu adevărat ca fiecare elev să progreseze. Cu siguranță, orele cu Maria au avut un rol important în dezvoltarea mea muzicală.</p>
+            <div class="testimonial-meta">
+              <div class="testimonial-avatar">A</div>
+              <div>
+                <p class="testimonial-name">Alex Craciun</p>
+                <p class="testimonial-role">fost elev · teoria muzicală</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
-    <div class="carousel-dots" id="carouselDots">
-      <button class="dot active" aria-label="Testimonialul 1"></button>
-      <button class="dot" aria-label="Testimonialul 2"></button>
-      <button class="dot" aria-label="Testimonialul 3"></button>
-    </div>
+  </div>
+
+  <div class="carousel-dots" id="carouselDots" aria-label="Navigare testimoniale">
+    <button class="dot active" aria-label="Testimonialul 1"></button>
+    <button class="dot" aria-label="Testimonialul 2"></button>
   </div>
 </section>
 

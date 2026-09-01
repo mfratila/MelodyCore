@@ -43,22 +43,28 @@ if (ctaHero) {
 }
 
 (function(){
+  const section = document.getElementById('testimoniale');
   const track = document.getElementById('carouselTrack');
-  if (!track) return;
+  const viewport = document.querySelector('.testimonials-viewport');
+  if (!section || !track || !viewport) return;
+
   const dots = document.querySelectorAll('#carouselDots .dot');
-  const slideCount = track.children.length;
-  let index = 0;
-  function update(){
-    track.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  const slides = Array.from(track.children);
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+  function updateCarouselProgress() {
+    const scrollDistance = Math.max(0, section.offsetHeight - window.innerHeight);
+    const progress = scrollDistance > 0 ? clamp((window.scrollY - section.offsetTop) / scrollDistance, 0, 1) : 0;
+    const maxTranslate = Math.max(0, track.scrollWidth - viewport.clientWidth);
+    track.style.transform = `translate3d(${-maxTranslate * progress}px, 0, 0)`;
+
+    if (dots.length) {
+      const nextIndex = Math.min(slides.length - 1, Math.round(progress * (slides.length - 1)));
+      dots.forEach((dot, index) => dot.classList.toggle('active', index === nextIndex));
+    }
   }
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    index = (index - 1 + slideCount) % slideCount;
-    update();
-  });
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    index = (index + 1) % slideCount;
-    update();
-  });
-  dots.forEach((d, i) => d.addEventListener('click', () => { index = i; update(); }));
+
+  window.addEventListener('scroll', updateCarouselProgress, { passive: true });
+  window.addEventListener('resize', updateCarouselProgress);
+  updateCarouselProgress();
 })();
