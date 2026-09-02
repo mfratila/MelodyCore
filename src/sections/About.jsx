@@ -7,7 +7,6 @@ export function About() {
     <Reveal as="section" className="section" id="despre">
       <div className="wrap despre">
         <div className="despre-photo">
-          <div className="despre-tape" />
           <img
             src="/assets/images/maria-portrait.jpeg"
             alt="Maria Chicoș, profesoară de canto, pian și teorie muzicală la Melody Core"
