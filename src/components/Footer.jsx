@@ -1,4 +1,4 @@
-import { site, footerNav } from '../data/site';
+import { site, footerNav, legalNav } from '../data/site';
 import { Brand } from './Brand';
 import { SmoothLink } from './SmoothLink';
 
@@ -14,6 +14,13 @@ export function Footer() {
             </SmoothLink>
           ))}
         </div>
+      </div>
+      <div className="foot-legal">
+        {legalNav.map((item) => (
+          <SmoothLink key={item.to} to={item.to}>
+            {item.label}
+          </SmoothLink>
+        ))}
       </div>
       <p className="foot-bottom">{site.copyright}</p>
     </footer>

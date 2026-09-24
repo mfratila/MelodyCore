@@ -22,7 +22,7 @@ export const credentials = [
   {
     id: 'cursuri',
     icon: 'graduation',
-    text: 'Cursuri de evaluare comportamentală și profiling, arta vorbitului în public, gestionarea emoțiilor, artă teatrală și prezență scenică.',
+    text: 'Cursuri de evaluare comportamentală și profiling, arta vorbitului în public, gestionarea emoțiilor, artă teatrală și prezență scenică, participând în piese de teatru precum „My Fair Lady” și „Îmblânzirea Scorpiei”, în colaborare cu Teatrul „Toma Caragiu” din Ploiești.',
   },
 ];
 

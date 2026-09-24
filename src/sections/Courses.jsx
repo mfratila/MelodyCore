@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Reveal } from '../components/Reveal';
 import { SectionHead } from '../components/SectionHead';
 import { CourseIcon } from '../components/icons';
@@ -19,6 +20,11 @@ export function Courses() {
             </article>
           ))}
         </Reveal>
+        <div className="cards-more">
+          <Link className="btn btn-outline" to="/preturi">
+            Vezi prețurile și abonamentele →
+          </Link>
+        </div>
       </div>
     </Reveal>
   );

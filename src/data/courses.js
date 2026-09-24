@@ -17,7 +17,7 @@ export const courses = [
     id: 'teorie',
     icon: 'staff',
     title: 'Teoria muzicii',
-    text: 'Bazele teoriei explicate simplu și aplicat, pentru o înțelegere solidă a muzicii pe care o cânți.',
+    text: 'De la bazele teoriei explicate simplu și aplicat, pentru o înțelegere solidă a muzicii, până la pregătire pentru admiterea la liceul de muzică și facultatea de muzică.',
     age: 'Copii 4+ · adolescenți · adulți',
   },
 ];
