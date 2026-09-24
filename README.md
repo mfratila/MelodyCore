@@ -39,6 +39,7 @@ Textele care se schimbă des stau în `src/data/`, separat de markup:
 | `src/data/features.js` | „De ce Melody Core” |
 | `src/data/testimonials.js` | testimonialele elevilor |
 | `src/data/credentials.js` | parcursul Mariei și badge-urile de pe pagina principală |
+| `src/data/pricing.js` | prețurile și abonamentele (pagina `/preturi`) |
 
 Pentru a adăuga un testimonial: pune poza în `public/assets/images/testimonials/`
 și adaugă o intrare în `src/data/testimonials.js`.
@@ -49,6 +50,9 @@ Pentru a adăuga un testimonial: pune poza în `public/assets/images/testimonial
 | --- | --- |
 | `/` | pagina principală |
 | `/despre-maria` | Povestea Mariei |
+| `/preturi` | Prețuri |
+| `/politica-de-confidentialitate` | Politica de confidențialitate |
+| `/termeni-si-conditii` | Termeni și condiții |
 | `/despre-maria.html` | redirect către `/despre-maria` (URL vechi) |
 | orice altceva | pagina 404 |
 
@@ -57,3 +61,13 @@ Pentru a adăuga un testimonial: pune poza în `public/assets/images/testimonial
 `vercel.json` conține rewrite-ul SPA (toate rutele → `index.html`) și redirectul
 permanent de la vechiul `/despre-maria.html`. Pe alt host, ambele reguli trebuie
 replicate, altfel accesul direct la `/despre-maria` returnează 404.
+
+## Formularul de contact
+
+Formularul din secțiunea „Prima lecție gratuită” trimite datele pe e-mail prin
+[Web3Forms](https://web3forms.com), fără backend și fără bază de date proprie.
+Creează o cheie de acces pe web3forms.com (cu adresa de e-mail pe care vrei să
+primești cererile) și setează variabila `VITE_WEB3FORMS_ACCESS_KEY` în Vercel
+(Settings → Environment Variables) și, local, într-un fișier `.env.local`
+(vezi `.env.example`). Fără cheie, formularul afișează un mesaj care trimite
+vizitatorul la telefon / Instagram.

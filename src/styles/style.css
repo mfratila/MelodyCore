@@ -315,3 +315,68 @@ footer .wrap{ display:flex; justify-content:space-between; align-items:center; f
   .ribbon-big{ font-size:24px; padding:18px 30px; }
   .photo-grid{ grid-template-columns:1fr; }
 }
+
+/* ---------- contact form (in cta banner) ---------- */
+.cta-banner p.form-intro{ font-family:var(--font-script); font-size:26px; font-weight:700; margin:44px 0 18px; }
+.contact-form{ position:relative; z-index:2; max-width:620px; margin:0 auto; text-align:left; background:var(--paper); border-radius:22px; padding:30px 30px 26px; box-shadow:12px 12px 0 rgba(74,14,8,.22); }
+.form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px 18px; }
+.field{ display:flex; flex-direction:column; gap:6px; font-size:13px; font-weight:700; color:var(--maroon-deep); }
+.field-wide{ grid-column:1 / -1; }
+.field input, .field select, .field textarea{ font:inherit; font-weight:500; font-size:15px; color:var(--maroon); background:#fff; border:1.5px solid rgba(74,14,8,.22); border-radius:12px; padding:11px 14px; width:100%; transition:border-color .2s ease, box-shadow .2s ease; }
+.field textarea{ resize:vertical; min-height:84px; }
+.field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--orange-deep); box-shadow:0 0 0 3px rgba(232,98,42,.2); }
+.consent{ display:flex; align-items:flex-start; gap:10px; margin:18px 0 20px; font-size:13px; line-height:1.55; color:var(--maroon-deep); }
+.consent input{ width:18px; height:18px; margin-top:1px; flex:0 0 auto; accent-color:var(--maroon); }
+.consent a, .form-error a{ text-decoration:underline; font-weight:700; }
+.contact-form .btn-ribbon:disabled{ opacity:.6; cursor:progress; }
+.cta-banner .contact-form p{ margin:0; }
+.cta-banner .contact-form p.form-error{ margin-top:16px; font-size:14px; line-height:1.55; color:#9B1C0C; }
+.contact-form-done{ text-align:center; }
+.cta-banner .contact-form-done p{ font-size:16px; line-height:1.6; }
+.cta-banner .contact-form-done .script{ font-size:34px; color:var(--orange-deep); margin-bottom:6px; }
+
+/* ---------- prețuri ---------- */
+.cards-more{ margin-top:36px; text-align:center; }
+.page-intro h1{ font-size:44px; margin:8px 0 18px; }
+.page-intro p{ font-size:16px; line-height:1.85; max-width:640px; margin-bottom:14px; }
+.page-intro .script{ font-size:28px; color:var(--orange-deep); }
+.section-lead{ margin-top:12px; font-size:15px; opacity:.8; }
+.price-cards{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+.price-card{ position:relative; background:var(--paper); border:1.5px dashed var(--gold); border-radius:20px; padding:28px 22px 24px; display:flex; flex-direction:column; box-shadow:0 10px 30px rgba(74,14,8,.08); }
+.price-card h3{ font-size:19px; margin-bottom:4px; }
+.price-detail{ font-size:13.5px; color:var(--maroon-deep); opacity:.75; margin-bottom:22px; }
+.price-amount{ font-size:15px; font-weight:700; margin-top:auto; }
+.price-amount strong{ font-family:var(--font-display); font-weight:900; font-size:36px; }
+.price-amount span{ display:block; font-size:13px; font-weight:600; opacity:.7; }
+.price-total{ margin-top:14px; padding-top:12px; border-top:1px dashed rgba(74,14,8,.25); font-size:13.5px; }
+.price-discount{ position:absolute; top:-12px; right:18px; background:var(--maroon); color:var(--paper); font-weight:700; font-size:13px; padding:6px 12px; border-radius:999px; transform:rotate(3deg); }
+.price-table-wrap{ overflow-x:auto; border-radius:20px; box-shadow:0 10px 30px rgba(74,14,8,.08); }
+.price-table{ width:100%; min-width:560px; border-collapse:collapse; background:var(--paper); text-align:center; font-size:15px; }
+.price-table th, .price-table td{ padding:16px 12px; border-bottom:1px dashed rgba(74,14,8,.2); }
+.price-table tbody tr:last-child > *{ border-bottom:none; }
+.price-table thead th{ background:var(--maroon); color:var(--paper); font-size:14px; }
+.price-table th span{ display:block; font-size:12px; font-weight:600; opacity:.75; margin-top:2px; }
+.price-table tbody th{ text-align:left; padding-left:22px; }
+.price-table td strong{ font-family:var(--font-display); font-weight:900; font-size:22px; }
+.price-notes p{ font-size:15px; line-height:1.8; max-width:720px; margin-bottom:14px; }
+.price-notes a, .legal a{ text-decoration:underline; font-weight:700; }
+
+/* ---------- legal pages ---------- */
+.legal{ max-width:760px; }
+.legal h1{ font-size:40px; margin:8px 0 6px; }
+.legal-updated{ font-size:13px; opacity:.65; margin-bottom:28px; }
+.legal h2{ font-size:22px; margin:34px 0 10px; }
+.legal p, .legal li{ font-size:15.5px; line-height:1.8; }
+.legal p{ margin-bottom:12px; }
+.legal ul{ padding-left:22px; margin-bottom:12px; }
+.foot-legal{ display:flex; justify-content:center; gap:22px; flex-wrap:wrap; font-size:13px; opacity:.7; margin-top:28px; padding:0 20px; }
+.foot-legal a{ text-decoration:underline; }
+
+@media (max-width:860px){
+  .price-cards{ grid-template-columns:1fr 1fr; row-gap:30px; }
+}
+@media (max-width:560px){
+  .price-cards, .form-grid{ grid-template-columns:1fr; }
+  .contact-form{ padding:24px 20px 22px; }
+  .page-intro h1, .legal h1{ font-size:34px; }
+}

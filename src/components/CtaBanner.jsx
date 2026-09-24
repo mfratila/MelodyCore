@@ -1,6 +1,7 @@
 import { site } from '../data/site';
 import { PhoneIcon, InstagramIcon } from './icons';
 import { Reveal } from './Reveal';
+import { ContactForm } from './ContactForm';
 
 export function CtaBanner() {
   return (
@@ -20,6 +21,8 @@ export function CtaBanner() {
             {site.instagram.handle}
           </a>
         </div>
+        <p className="form-intro">sau lasă-ne datele tale și te sunăm noi</p>
+        <ContactForm />
       </div>
     </Reveal>
   );
